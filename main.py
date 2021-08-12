@@ -55,8 +55,8 @@ class jiujiu_ai():
         data = data.text
         #print(data.encode('gbk','ignore').decode(encoding="gbk", errors="strict"))
         s = etree.HTML(data.encode('gbk','ignore').decode(encoding="gbk", errors="strict"))
-        meinv_mingzi = ''.join(s.xpath('//title/text()'))
-        meinv_dizhi = 'https://www.33b50.xyz/'+''.join(s.xpath('//*[@id="playurl1"]/@href'))
+        meinv_mingzi = (''.join(s.xpath('//title/text()')).replace('0-1','1-1'))
+        meinv_dizhi = 'https://www.33b51.xyz/'+''.join(s.xpath('//*[@id="playurl1"]/@href'))
         if meinv_dizhi == 'https://www.33b50.xyz/':
             pass
         else:
